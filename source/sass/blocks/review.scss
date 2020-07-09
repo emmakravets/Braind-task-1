@@ -35,6 +35,17 @@
   color: $gray;
 }
 
+.review__publication-status {
+  font-size: 10px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $white;
+
+  &--published {
+    background-color: $green;
+  }
+}
+
 .review__details {
   order: 4;
 }
