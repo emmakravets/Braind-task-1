@@ -1,0 +1,44 @@
+.review {
+  width: auto;
+  padding: 20px;
+  padding-top: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid $light-gray;
+}
+
+.review__item-title {
+  @include text-reset;
+
+  order: 3;
+
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.review__item-image {
+  order: 2;
+}
+
+.review__status {
+  order: 1;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review__date {
+  line-height: 16px;
+  color: $gray;
+}
+
+.review__details {
+  order: 4;
+}
+
+.review__btn-wrapper {
+  order: 5;
+}

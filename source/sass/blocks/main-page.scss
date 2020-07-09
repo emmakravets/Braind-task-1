@@ -1,0 +1,59 @@
+.main-page {
+  width: auto;
+}
+
+.main-page__container {
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.main-page__title {
+  @include text-reset;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+.main-page__message {
+  width: 100%;
+  margin-top: 14px;
+  padding-top: 36px;
+  padding-bottom: 30px;
+  padding-left: 56px;
+
+  background-color: $super-light-gray;
+}
+
+.main-page__message-text {
+  @include text-reset;
+
+  position: relative;
+  width: 80%;
+
+  font-size: 15px;
+  line-height: 24px;
+
+  opacity: 0.8;
+
+  &::before {
+    @include pseudo;
+
+    top: 5px;
+    left: -26px;
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/message-sign.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.main-page__reviews {
+  margin-top: 32px;
+}

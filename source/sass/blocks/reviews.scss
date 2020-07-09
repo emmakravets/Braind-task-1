@@ -1,0 +1,12 @@
+.reviews {
+  width: auto;
+}
+
+.reviews__list {
+  @include list-reset;
+
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto;
+}
