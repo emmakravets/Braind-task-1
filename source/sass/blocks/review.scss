@@ -44,6 +44,10 @@
   &--published {
     background-color: $green;
   }
+
+  &--moderation {
+    opacity: 0.6;
+  }
 }
 
 .review__details {
