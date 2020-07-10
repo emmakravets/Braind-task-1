@@ -24,10 +24,15 @@
 
           <ul class="reviews__list">
             <li class="reviews__item">
-              <section class="reviews__item-inner review">
-                <h3 class="review__item-title">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</h3>
-                <img class="review__item-image" src="img/bosch-PSB-1.jpg" width="40" height="40"
-                alt="Дрель ударная BOSCH PSB 550 RЕ">
+              <section class="reviews__item-inner review review--followed-by-extended">
+                <h3 class="review__title">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</h3>
+                <div class="review__main-image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="img/bosch-PSB-1.webp">
+                    <img class="review__main-image" src="img/bosch-PSB-1.jpg" width="40" height="40"
+                    alt="Дрель ударная BOSCH PSB 550 RЕ">
+                    </picture>
+                </div>
 
                 <div class="review__status">
                   <time class="review__date" datetime="2018-08-01">1 августа, 2018</time>
@@ -66,15 +71,13 @@
                   <button class="review__btn-more" type="button" aria-label="Развернуть отзыв">Подробнее</button>
                 </div>
 
-                <div class="review__btn-wrapper">
-                  <button class="review__btn" type="button">Дополнить отзыв</button>
-                </div>
+                <button class="review__btn btn" type="button">Дополнить отзыв</button>
               </section>
 
-              <section class="reviews__item-inner review">
-                <h3 class="review__title review__title--more">Дополненный отзыв</h3>
+              <section class="reviews__item-inner review review--extended">
+                <h3 class="review__title review__title--extended-orange">Дополненный отзыв</h3>
 
-                <div class="review__status">
+                <div class="review__status review__status--extended">
                   <time class="review__date" datetime="2018-08-01">1 августа, 2018</time>
                   <span class="review__publication-status review__publication-status--moderation">На модерации</span>
                 </div>
@@ -105,23 +108,38 @@
 
                 <p class="review__text">Год прошел, работает как пушка!</p>
                 <div class="review__images-wrapper">
-                  <img class="review__image" src="http://placehold.it/40x40" width="68" height="54"
-                  alt="Дрель ударная BOSCH PSB 550 RЕ">
-                  <img class="review__image" src="http://placehold.it/40x40" width="68" height="54"
-                  alt="Дрель ударная BOSCH PSB 550 RЕ">
+                  <div class="review__image-wrapper">
+                    <picture >
+                      <source type="image/webp" srcset="img/bosch-PSB-2.webp">
+                      <img class="review__image" src="img/bosch-PSB-2.jpg" width="68" height="54"
+                      alt="Дрель ударная BOSCH PSB 550 RЕ">
+                    </picture>
+                  </div>
+                  <div class="review__image-wrapper">
+                    <picture >
+                      <source type="image/webp" srcset="img/bosch-PSB-3.webp">
+                      <img class="review__image" src="img/bosch-PSB-3.jpg" width="68" height="54"
+                      alt="Дрель ударная BOSCH PSB 550 RЕ">
+                    </picture>
+                  </div>
                 </div>
               </section>
             </li>
 
             <li class="reviews__item reviews__item--deactived">
               <section class="reviews__item-inner review">
-                <h3 class="review__item-title">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</h3>
-                <img class="review__item-image" src="http://placehold.it/40x40" width="40" height="40"
-                alt="Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР">
+                <h3 class="review__title">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</h3>
+                <div class="review__main-image-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="img/decorative-screen.webp">
+                    <img class="review__main-image" src="img/decorative-screen.png" width="41" height="40"
+                    alt="Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР">
+                    </picture>
+                </div>
 
                 <div class="review__status">
                   <time class="review__date" datetime="2019-06-23">23 июня, 2019</time>
-                  <span class="review__publication-status review__publication-status--published">Не опубликован</span>
+                  <span class="review__publication-status review__publication-status--unpublished">Не опубликован</span>
                 </div>
 
                 <p class="review__system-message">К сожалению, ваш отзыв не прошёл модерацию.</p>

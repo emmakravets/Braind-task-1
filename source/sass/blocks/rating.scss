@@ -1,0 +1,30 @@
+.rating {
+  width: auto;
+  display: grid;
+  grid-template-columns: auto 23px;
+  grid-template-rows: 20px 1fr;
+}
+
+.rating__total-count {
+  @include text-reset;
+
+  font-weight: bold;
+  color: $gray;
+}
+
+.rating__results-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rating__results-item {
+  margin-right: 14px;
+
+  color: $gray;
+}
+
+.rating__results-index {
+  font-weight: bold;
+}

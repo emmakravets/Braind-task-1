@@ -4,9 +4,7 @@
 
 .main-page__container {
   margin: 0 auto;
-  padding-top: 70px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 70px 20px;
 
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -42,15 +40,24 @@
   opacity: 0.8;
 
   &::before {
-    @include pseudo;
+    content: "!";
+    position: absolute;
 
     top: 5px;
     left: -26px;
+
     width: 15px;
     height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-    background-image: url("../img/message-sign.svg");
-    background-repeat: no-repeat;
+    font-size: 10px;
+    line-height: 14px;
+    color: $white;
+
+    background-color: $orange;
+    border-radius: 50%;
   }
 }
 

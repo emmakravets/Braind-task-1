@@ -10,6 +10,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const del = require("del");
@@ -60,6 +61,12 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
+    .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 

@@ -14,3 +14,12 @@
 
   list-style: none;
 }
+
+@mixin btn-reset {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer
+}

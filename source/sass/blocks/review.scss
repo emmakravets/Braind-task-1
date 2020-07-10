@@ -4,22 +4,61 @@
   padding-top: 17px;
 
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
   border: 1px solid $light-gray;
+
+  &--followed-by-extended {
+    border-bottom: none;
+  }
+
+  &--extended {
+    position: relative;
+
+    padding-top: 12px;
+    border-top: none;
+
+    &::before {
+      @include pseudo;
+
+      top: 0;
+      left: 20px;
+      right: 20px;
+
+      width: auto;
+      height: 1px;
+
+      background-color: $light-gray;
+    }
+  }
 }
 
-.review__item-title {
+.review__title {
   @include text-reset;
 
   order: 3;
+  width: 82%;
+  padding-top: 8px;
+  padding-left: 14px;
 
   font-size: 14px;
   font-weight: normal;
+
+  &--extended-orange {
+    order: -2;
+    padding: 0;
+
+    color: $orange;
+  }
 }
 
-.review__item-image {
+.review__main-image-wrapper {
   order: 2;
+  margin-top: 13px;
+}
+
+.review__main-image {
+  height: 40px;
 }
 
 .review__status {
@@ -28,6 +67,12 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &--extended {
+    order: -1;
+    padding-top: 10px;
+  }
 }
 
 .review__date {
@@ -36,24 +81,88 @@
 }
 
 .review__publication-status {
+  display: inline-block;
+  padding: 4px 8px;
+
   font-size: 10px;
   line-height: 14px;
   text-transform: uppercase;
   color: $white;
+
+  border-radius: 2px;
 
   &--published {
     background-color: $green;
   }
 
   &--moderation {
-    opacity: 0.6;
+    background-color: rgba(80, 173, 1, 0.6);
   }
+
+  &--unpublished {
+    background-color: $dark-gray;
+  }
+}
+
+.review__rating {
+  margin-top: 22px;
 }
 
 .review__details {
   order: 4;
 }
 
-.review__btn-wrapper {
+.review__text {
+  @include text-reset;
+
+  width: 100%;
+  max-width: 900px;
+  margin-top: 10px;
+
+  letter-spacing: 0.25px;
+}
+
+.review__btn-more {
+  @include btn-reset;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+  line-height: 22px;
+  color: $orange;
+}
+
+.review__btn {
+  @include btn-reset;
+
   order: 5;
+  margin-top: 15px;
+}
+
+.review__images-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  margin-top: 9px;
+}
+
+.review__image-wrapper {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  border: 1px solid $light-gray-yellow;
+}
+
+.review__image {
+  display: block;
+}
+
+.review__system-message {
+  @include text-reset;
+
+  order: 3;
+  margin-top: 14px;
+
+  letter-spacing: 0.25px;
+  color: $asphalt-gray;
 }
