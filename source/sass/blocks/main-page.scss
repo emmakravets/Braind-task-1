@@ -64,3 +64,30 @@
 .main-page__reviews {
   margin-top: 32px;
 }
+
+@media (min-width: $tablet-width) {
+  .main-page__container {
+    padding: 30px 30px 0 30px;
+  }
+
+  .main-page__message-text  {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-page__container {
+    gap: 22px;
+    padding: 80px 147px;
+  }
+
+  .main-page__message {
+    margin-top: 0;
+    padding-top: 31px;
+    padding-left: 75px;
+  }
+
+  .main-page__reviews {
+    margin-top: 0;
+  }
+}

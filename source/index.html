@@ -22,17 +22,37 @@
         <section class="main-page__reviews reviews">
           <h2 class="visually-hidden">Список отзывов</h2>
 
+          <header class="reviews__header">
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Фото</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Наименование товара</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Ваши отзывы</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Статус отзыва</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Действия</p>
+            </div>
+          </header>
+
           <ul class="reviews__list">
             <li class="reviews__item">
               <section class="reviews__item-inner review review--followed-by-extended">
-                <h3 class="review__title">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</h3>
-                <div class="review__main-image-wrapper">
+                <h3 class="review__title">
+                  <a class="review__title-link" href="#">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</a>
+                </h3>
+                <a class="review__main-image-wrapper" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/bosch-PSB-1.webp">
                     <img class="review__main-image" src="img/bosch-PSB-1.jpg" width="40" height="40"
                     alt="Дрель ударная BOSCH PSB 550 RЕ">
-                    </picture>
-                </div>
+                  </picture>
+                </a>
 
                 <div class="review__status">
                   <time class="review__date" datetime="2018-08-01">1 августа, 2018</time>
@@ -74,68 +94,72 @@
                 <button class="review__btn btn" type="button">Дополнить отзыв</button>
               </section>
 
-              <section class="reviews__item-inner review review--extended">
+              <section class="reviews__item-inner reviews__item-inner--extended review review--extended">
                 <h3 class="review__title review__title--extended-orange">Дополненный отзыв</h3>
 
                 <div class="review__status review__status--extended">
-                  <time class="review__date" datetime="2018-08-01">1 августа, 2018</time>
+                  <time class="review__date" datetime="2018-08-01">19 августа, 2018</time>
                   <span class="review__publication-status review__publication-status--moderation">На модерации</span>
                 </div>
 
-                <div class="review__rating rating">
-                  <label class="rating__label" for="rating-more-5" aria-label="5 звёзд"></label>
-                  <input class="rating__input visually-hidden" id="rating-more-5" type="radio" name="rating" value="5" onclick="this.checked = false;">
+                <div class="review__details review__details--extended">
+                  <div class="review__rating review__rating--desktop rating">
+                    <label class="rating__label" for="rating-more-5" aria-label="5 звёзд"></label>
+                    <input class="rating__input visually-hidden" id="rating-more-5" type="radio" name="rating" value="5" onclick="this.checked = false;">
 
-                  <label class="rating__label" for="rating-more-4" aria-label="4 звезды"></label>
-                  <input class="rating__input visually-hidden" id="rating-more-4" type="radio" name="rating" value="4">
+                    <label class="rating__label" for="rating-more-4" aria-label="4 звезды"></label>
+                    <input class="rating__input visually-hidden" id="rating-more-4" type="radio" name="rating" value="4">
 
-                  <label class="rating__label" for="rating-more-3" aria-label="3 звезды"></label>
-                  <input class="rating__input visually-hidden" id="rating-more-3" type="radio" name="rating" value="3">
+                    <label class="rating__label" for="rating-more-3" aria-label="3 звезды"></label>
+                    <input class="rating__input visually-hidden" id="rating-more-3" type="radio" name="rating" value="3">
 
-                  <label class="rating__label" for="rating-more-2" aria-label="2 звезды"></label>
-                  <input class="rating__input visually-hidden" id="rating-more-2" type="radio" name="rating" value="2">
+                    <label class="rating__label" for="rating-more-2" aria-label="2 звезды"></label>
+                    <input class="rating__input visually-hidden" id="rating-more-2" type="radio" name="rating" value="2">
 
-                  <label class="rating__label" for="rating-more-1" aria-label="1 звезда"></label>
-                  <input class="rating__input visually-hidden" id="rating-more-1" type="radio" name="rating" value="1">
+                    <label class="rating__label" for="rating-more-1" aria-label="1 звезда"></label>
+                    <input class="rating__input visually-hidden" id="rating-more-1" type="radio" name="rating" value="1">
 
-                  <p class="rating__total-count">4,6</p>
-                  <ul class="rating__results-list">
-                    <li class="rating__results-item">Впечатление: <span class="rating__results-index">5</span></li>
-                    <li class="rating__results-item">Соответствие: <span class="rating__results-index">4</span></li>
-                    <li class="rating__results-item">Надёжность: <span class="rating__results-index">5</span></li>
-                  </ul>
-                </div>
-
-                <p class="review__text">Год прошел, работает как пушка!</p>
-                <div class="review__images-wrapper">
-                  <div class="review__image-wrapper">
-                    <picture >
-                      <source type="image/webp" srcset="img/bosch-PSB-2.webp">
-                      <img class="review__image" src="img/bosch-PSB-2.jpg" width="68" height="54"
-                      alt="Дрель ударная BOSCH PSB 550 RЕ">
-                    </picture>
+                    <p class="rating__total-count">4,6</p>
+                    <ul class="rating__results-list">
+                      <li class="rating__results-item">Впечатление: <span class="rating__results-index">5</span></li>
+                      <li class="rating__results-item">Соответствие: <span class="rating__results-index">4</span></li>
+                      <li class="rating__results-item">Надёжность: <span class="rating__results-index">5</span></li>
+                    </ul>
                   </div>
-                  <div class="review__image-wrapper">
-                    <picture >
-                      <source type="image/webp" srcset="img/bosch-PSB-3.webp">
-                      <img class="review__image" src="img/bosch-PSB-3.jpg" width="68" height="54"
-                      alt="Дрель ударная BOSCH PSB 550 RЕ">
-                    </picture>
+
+                  <p class="review__text">Год прошел, работает как пушка!</p>
+                  <div class="review__images-wrapper">
+                    <div class="review__image-wrapper">
+                      <picture >
+                        <source type="image/webp" srcset="img/bosch-PSB-2.webp">
+                        <img class="review__image" src="img/bosch-PSB-2.jpg" width="68" height="54"
+                        alt="Дрель ударная BOSCH PSB 550 RЕ">
+                      </picture>
+                    </div>
+                    <div class="review__image-wrapper">
+                      <picture >
+                        <source type="image/webp" srcset="img/bosch-PSB-3.webp">
+                        <img class="review__image" src="img/bosch-PSB-3.jpg" width="68" height="54"
+                        alt="Дрель ударная BOSCH PSB 550 RЕ">
+                      </picture>
+                    </div>
                   </div>
                 </div>
               </section>
             </li>
 
-            <li class="reviews__item reviews__item--deactived">
-              <section class="reviews__item-inner review">
-                <h3 class="review__title">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</h3>
-                <div class="review__main-image-wrapper">
+            <li class="reviews__item">
+              <section class="reviews__item-inner review review--deactivated">
+                <h3 class="review__title">
+                  <a class="review__title-link" href="#">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</a>
+                </h3>
+                <a class="review__main-image-wrapper" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/decorative-screen.webp">
                     <img class="review__main-image" src="img/decorative-screen.png" width="41" height="40"
                     alt="Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР">
-                    </picture>
-                </div>
+                  </picture>
+                </a>
 
                 <div class="review__status">
                   <time class="review__date" datetime="2019-06-23">23 июня, 2019</time>

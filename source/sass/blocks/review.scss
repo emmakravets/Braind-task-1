@@ -28,7 +28,7 @@
       width: auto;
       height: 1px;
 
-      background-color: $light-gray;
+      background-color: $very-light-gray;
     }
   }
 }
@@ -41,7 +41,6 @@
   padding-top: 8px;
   padding-left: 14px;
 
-  font-size: 14px;
   font-weight: normal;
 
   &--extended-orange {
@@ -50,6 +49,11 @@
 
     color: $orange;
   }
+}
+
+.review__title-link {
+  font-size: 14px;
+  color: inherit;
 }
 
 .review__main-image-wrapper {
@@ -104,12 +108,13 @@
   }
 }
 
-.review__rating {
-  margin-top: 22px;
-}
-
 .review__details {
   order: 4;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .review__text {
@@ -141,7 +146,7 @@
 
 .review__images-wrapper {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 70px 70px;
   gap: 10px;
   margin-top: 9px;
 }
@@ -165,4 +170,213 @@
 
   letter-spacing: 0.25px;
   color: $asphalt-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .review {
+    display: grid;
+    grid-template-areas:
+      "img title status"
+      "details details details"
+      "btn btn btn";
+    grid-template-columns: 40px 2fr 220px;
+
+
+    &--extended {
+      padding-top: 15px;
+    }
+  }
+
+  .review__title {
+    grid-area: title;
+
+    padding-top: 0;
+
+    &--extended-orange {
+      grid-column: 1 / 3;
+    }
+  }
+
+  .review__main-image-wrapper {
+    grid-area: img;
+
+    margin-top: 0;
+  }
+
+  .review__status {
+    grid-area: status;
+
+    margin-top: -20px;
+
+    &--extended {
+      padding-top: 22px;
+    }
+  }
+
+  .review__details {
+    grid-area: details;
+  }
+
+  .review__btn {
+    grid-area: btn;
+  }
+
+  .review__system-message {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    display: flex;
+    padding-top: 11px;
+    padding-right: 0;
+    padding-left: 17px;
+
+    border: none;
+    border-bottom: 1px solid $light-gray;
+
+    &--followed-by-extended {
+      border-bottom-color: transparent;
+    }
+
+    &--extended {
+      &::before {
+        left: 265px;
+        right: 0;
+      }
+    }
+  }
+
+  .review__title {
+    order: 2;
+    width: 153px;
+    margin-left: 22px;
+    padding: 0;
+
+    &--extended-orange {
+      position: relative;
+      left: 218px;
+
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+
+  .review__title-link {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .review__main-image-wrapper {
+    order: 1;
+    margin-top: 5px;
+  }
+
+  .review__text {
+    margin-top: 17px;
+  }
+
+  .review__btn-more {
+    margin-top: 7px;
+
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  .review__btn {
+    height: 38px;
+    margin-top: 0;
+    margin-left: 35px;
+  }
+
+  .review__status {
+    order: 4;
+    width: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-left: 27px;
+
+    &--extended {
+      padding-top: 0;
+      padding-left: 38px;
+    }
+  }
+
+  .review__date {
+    margin-top: 7px;
+  }
+
+  .review__details {
+    order: 3;
+    min-width: 370px;
+    width: 38%;
+    margin-left: 27px;
+    padding-left: 0;
+
+    &--extended {
+      padding-top: 10px;
+      padding-left: 38px;
+    }
+  }
+
+  .review__rating {
+    margin-top: 0;
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .review__system-message {
+    min-width: 370px;
+    width: 38%;
+    margin: 0;
+    margin-left: 27px;
+    padding-top: 6px;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $wide-desktop-width) {
+  .review {
+    &--extended {
+      &::before {
+        left: 270px;
+      }
+    }
+  }
+
+  .review__title-link,
+  .review__text,
+  .review__system-message {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .review__title {
+    &--extended-orange {
+      left: 231px;
+
+      font-size: 14px;
+    }
+  }
+
+  .review__details,
+  .review__system-message {
+    margin-left: 40px;
+  }
+
+  .review__btn-more {
+    margin-top: 10px;
+
+    font-size: 13px;
+  }
+
+  .review__btn {
+    margin-left: 43px;
+  }
 }
