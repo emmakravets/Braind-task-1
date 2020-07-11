@@ -1,10 +1,9 @@
 .review {
   width: auto;
-  padding: 20px;
-  padding-top: 17px;
-
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+  padding-top: 17px;
 
   border: 1px solid $light-gray;
 
@@ -16,6 +15,7 @@
     position: relative;
 
     padding-top: 12px;
+
     border-top: none;
 
     &::before {
@@ -130,11 +130,37 @@
 .review__btn-more {
   @include btn-reset;
 
+  position: relative;
+
   margin-top: 5px;
 
   font-size: 14px;
   line-height: 22px;
   color: $orange;
+
+  &::before,
+  &::after {
+    @include pseudo;
+
+    top: 8px;
+
+    display: block;
+    width: 2px;
+    height: 7px;
+
+    background-color: $orange;
+  }
+
+  &::before {
+    right: -13px;
+
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    right: -17px;
+    transform: rotate(45deg);
+  }
 }
 
 .review__btn {
