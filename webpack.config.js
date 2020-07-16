@@ -9,7 +9,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, `source`)
+      src: path.resolve(__dirname, `source/js/modules`)
     }
   },
   module: {
