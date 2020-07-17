@@ -1,49 +1,37 @@
-const cropText = (text) => {
-  return text.length > 254 ? text.slice(0, 253) + `...` : text;
-};
-
 export default class ReviewFullText {
-  constructor() {
-    this.reviewFullText = null;
-  }
-
   render() {
     this.renderText();
-    // this._createReviewTextHandlers();
+    this._createReviewTextHandlers();
   }
 
   renderText() {
     const reviewTextElements = document.querySelectorAll(`.review__text`);
 
     reviewTextElements.forEach((reviewTextElement) => {
-      this.reviewFullText = reviewTextElement.textContent;
-
-      this._createReviewTextHandlers(this.reviewFullText);
-
-      const reviewCropedText = cropText(reviewTextElement.textContent);
-      reviewTextElement.textContent = reviewCropedText;
-
-
-      // this._createReviewTextHandlers(this.reviewFullText);
+      reviewTextElement.classList.add(`review__text--croped`);
     });
-
   }
 
   setMoreBtnClickHandlers(handler) {
-    const moreBtnElements = document.querySelectorAll(`.review__btn-more`);
-    moreBtnElements.forEach((moreBtnElement) => {
-      moreBtnElement.addEventListener(`click`, handler);
-    });
+    const reviewListElement = document.querySelector(`.reviews__list`);
+    reviewListElement.addEventListener(`click`, handler);
   }
 
-  _createReviewTextHandlers(reviewText) {
+  _createReviewTextHandlers(kek) {
     const moreBtnClickHandler = (evt) => {
       const element = evt.target;
 
-      this._showReviewText(element);
+      if (element.tagName !== `BUTTON` && !element.classList.contains(`review__btn-more`)) {
+        return;
+      }
 
-      element.previousElementSibling.textContent = reviewText;
-      console.log(this.reviewFullText)
+      if (element.previousElementSibling.classList.contains(`review__text--croped`)) {
+        this._showReviewText(element);
+        element.previousElementSibling.classList.remove(`review__text--croped`);
+      } else {
+        this._hideReviewText(element);
+        element.previousElementSibling.classList.add(`review__text--croped`);
+      }
     }
 
     this.setMoreBtnClickHandlers(moreBtnClickHandler);
@@ -51,7 +39,7 @@ export default class ReviewFullText {
 
   _showReviewText(element) {
     element.classList.remove(`review__btn-more--hide`);
-    element.classList.add(`review__btn-more--show`);
+    element.classList.toggle(`review__btn-more--show`);
     element.textContent = `Свернуть`;
   }
 
