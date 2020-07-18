@@ -11,7 +11,6 @@ export default class Rating {
 
     ratingInputElements.forEach((ratingInputElement) => {
       const width = STAR_WIDTH * replaceComma(totalRatingCountElement);
-
       ratingInputElement.style.width = `${width}px`;
     });
   }
