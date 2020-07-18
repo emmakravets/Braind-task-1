@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мои отзывы о товарах</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <main class="main-page">
+      <div class="main-page__container">
+        <h1 class="main-page__title">Мои отзывы о товарах</h1>
+        <div class="main-page__message">
+          <p class="main-page__message-text">Ваши отзывы будут опубликованы на сайте после проверки модератором.</p>
+        </div>
+
+        <section class="main-page__reviews reviews">
+          <h2 class="visually-hidden">Список отзывов</h2>
+
+          <header class="reviews__header">
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Фото</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Наименование товара</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Ваши отзывы</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Статус отзыва</p>
+            </div>
+            <div class="reviews___header-item">
+              <p class="reviews___header-text">Действия</p>
+            </div>
+          </header>
+
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <section class="reviews__item-inner review review--followed-by-extended">
+                <h3 class="review__title">
+                  <a class="review__title-link" href="#">Дрель ударная BOSCH PSB 550 RЕ, БЗП Арт.0603130020</a>
+                </h3>
+                <a class="review__main-image-wrapper" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/bosch-PSB-1.webp">
+                    <img class="review__main-image" src="img/bosch-PSB-1.jpg" width="40" height="40" alt="Дрель ударная BOSCH PSB 550 RЕ">
+                  </picture>
+                </a>
+
+                <div class="review__status">
+                  <time class="review__date" datetime="2018-08-01">1 августа, 2018</time>
+                  <span class="review__publication-status review__publication-status--published">Опубликован</span>
+                </div>
+
+                <div class="review__details">
+                  <div class="review__rating rating">
+                    <h4 class="visually-hidden">Рейтинг товара</h4>
+
+                    <form class="rating__wrapper" action="#" method="GET">
+                      <input class="rating__input" type="radio" name="rating" value="1" aria-label="Отвратительно">
+                      <input class="rating__input" type="radio" name="rating" value="2" aria-label="Так себе">
+                      <input class="rating__input" type="radio" name="rating" value="3" aria-label="Неплохо">
+                      <input class="rating__input" type="radio" name="rating" value="4" aria-label="Хорошо">
+                      <input class="rating__input rating__input--fifth" type="radio" name="rating-main" value="5" aria-label="Классно" checked="" readonly="">
+                    </form>
+
+                    <p class="rating__total-count">4,6</p>
+                    <ul class="rating__results-list">
+                      <li class="rating__results-item">Впечатление: <span class="rating__results-index">5</span></li>
+                      <li class="rating__results-item">Соответствие: <span class="rating__results-index">4</span></li>
+                      <li class="rating__results-item">Надёжность: <span class="rating__results-index">5</span></li>
+                    </ul>
+                  </div>
+
+                  <p class="review__text">
+                    Значит купил я данную модель, поработал неделю, отказал один аккумулятор,
+                    заряд держит так себе, НОООООО МАГАЗИН АДЕКВАТНЫЙ, ОБМЕНЯЛИ НА НОВЫЙ, ПРИЧЁМ ПРИВЕЗЛИ ДОМОЙ.
+                    С ТАКИМ ПРОДАВЦОМ ПРИЯТНО ИМЕТЬ ДЕЛО!!! СОВЕТУЮ! Я МНОГО ВСЕГО ПОКУПАЛ, И БУДУ ПОКУПАТЬ)</p>
+                  <button class="review__btn-more review__btn-more--hide" type="button" aria-label="Развернуть/скрыть отзыв">Подробнее</button>
+                </div>
+
+                <button class="review__btn btn" type="button">Дополнить отзыв</button>
+              </section>
+
+              <section class="reviews__item-inner reviews__item-inner--extended review review--extended">
+                <h3 class="review__title review__title--extended-orange">Дополненный отзыв</h3>
+
+                <div class="review__status review__status--extended">
+                  <time class="review__date" datetime="2018-08-01">19 августа, 2018</time>
+                  <span class="review__publication-status review__publication-status--moderation">На модерации</span>
+                </div>
+
+                <div class="review__details review__details--extended">
+                  <div class="review__rating review__rating--desktop rating">
+                    <h4 class="visually-hidden">Рейтинг товара</h4>
+
+                    <form class="rating__wrapper" action="#" method="GET">
+                      <input class="rating__input" type="radio" name="rating" value="1" aria-label="Отвратительно">
+                      <input class="rating__input" type="radio" name="rating" value="2" aria-label="Так себе">
+                      <input class="rating__input" type="radio" name="rating" value="3" aria-label="Неплохо">
+                      <input class="rating__input" type="radio" name="rating" value="4" aria-label="Хорошо">
+                      <input class="rating__input rating__input--fifth" type="radio" name="rating-main" value="5" aria-label="Классно" checked="" onclick="return false;">
+                    </form>
+
+                    <p class="rating__total-count">4,6</p>
+                    <ul class="rating__results-list">
+                      <li class="rating__results-item">Впечатление: <span class="rating__results-index">5</span></li>
+                      <li class="rating__results-item">Соответствие: <span class="rating__results-index">4</span></li>
+                      <li class="rating__results-item">Надёжность: <span class="rating__results-index">5</span></li>
+                    </ul>
+                  </div>
+
+                  <p class="review__text">Год прошел, работает как пушка!</p>
+                  <div class="review__images-wrapper">
+                    <a class="review__image-link" href="#">
+                      <div class="review__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="img/smoothi-2.webp">
+                          <img class="review__image" src="img/smoothi-2.jpg" width="68" height="54" alt="Дрель ударная BOSCH PSB 550 RЕ">
+                        </picture>
+                      </div>
+                    </a>
+                    <a class="review__image-link" href="#">
+                      <div class="review__image-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="img/smoothi-1.webp">
+                          <img class="review__image" src="img/smoothi-1.jpg" width="68" height="54" alt="Дрель ударная BOSCH PSB 550 RЕ">
+                        </picture>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </li>
+
+            <li class="reviews__item">
+              <section class="reviews__item-inner review review--deactivated">
+                <h3 class="review__title">
+                  <a class="review__title-link" href="#">Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР</a>
+                </h3>
+                <a class="review__main-image-wrapper" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/decorative-screen.webp">
+                    <img class="review__main-image" src="img/decorative-screen.png" width="41" height="40" alt="Декоративный металлический экран на радиатор 3-х секционный 3 ДМЭР">
+                  </picture>
+                </a>
+
+                <div class="review__status">
+                  <time class="review__date" datetime="2019-06-23">23 июня, 2019</time>
+                  <span class="review__publication-status review__publication-status--unpublished">Не опубликован</span>
+                </div>
+
+                <p class="review__system-message">К сожалению, ваш отзыв не прошёл модерацию.</p>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
